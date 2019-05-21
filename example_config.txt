@@ -30,9 +30,9 @@ chrFiles = /share/ceph/gil213group/rcv216/tools/FREEC/S288C
 
 
 ##if you are working with something non-human, we may need to modify these parameters:
-minExpectedGC = 0.35
-maxExpectedGC = 0.55
-
+#minExpectedGC = 0.50
+#maxExpectedGC = 0.50
+telocentromeric = 7000
 
 #readCountThreshold=10
 

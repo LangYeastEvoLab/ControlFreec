@@ -61,6 +61,9 @@
    - If completed correctly, each sample directory will now contain the modified ratio.txt file
 ---
 - Now open R and import those ratio files
+
+`placeholder `
+
 ---
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"

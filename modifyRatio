@@ -1,5 +1,5 @@
 #!/bin/bash
-#
+#RCV
 #This script will alter the ratio file output from Control FREEC. This will add a column with sample name and a column with the output ploidy
 #These changes are useful for plotting CNVs in R, and this can be skipped if you figure out a better way to plot many graphs at once
 #This script is called by the modifyFREECRatio.sh script and must be in the same directory as it.

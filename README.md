@@ -47,10 +47,13 @@
 - If completed correctly, there will be a directory for each sample with output data
 
 ### Plotting Outputs
--This can be done individually on samples via the following on Sol (make sure R module is loaded):
+-This can be done individually on samples via the following command on Sol:
 
-`cat makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
+`cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
 
+ - Make sure the R module is loaded and you've added the makeGraph.R script
+ 
+-Doing this for many samples is a bit trickier
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"

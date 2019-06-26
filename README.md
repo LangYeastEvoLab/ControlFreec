@@ -51,7 +51,7 @@
 
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
 
- - Make sure the R module is loaded and you've added the makeGraph.R script
+  - Make sure the R module is loaded and you've added the makeGraph.R script
  
 - Doing this for many samples is a bit trickier and there may be a better solution than my workaround:
 

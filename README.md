@@ -53,11 +53,13 @@
 
  - Make sure the R module is loaded and you've added the makeGraph.R script
  
--Doing this for many samples is a bit trickier
+-Doing this for many samples is a bit trickier and there may be a better solution than my workaround:
+
+ - test
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"
-- make sure `sed` lines are working correctly by running them alone on the command line and viewing if changed were made in the Config file
+- make sure `sed` lines are working correctly by running them alone on the command line and viewing if changes were made in the Config file
 - I've noticed something odd and particular about chromosome names and file names
   - make sure the length file has *chr06* or *chrVI* and those match the headings in .fasta files (and reference genome)
   - make sure the individual chromosome fasta files are named without *chr*, e.g. 06.fasta or VI.fasta

@@ -45,20 +45,21 @@
 - If completed correctly, there will be a directory for each sample with output data
 
 ### Plotting Outputs
-- This can be done on an individual sample by the following command on Sol (make sure R module is loaded):
--  
+- This can be done on an individual sample by the following command on Sol (make sure R module is loaded)
+
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
 
 - Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here:
 1. You should have a bunch of directories (one per sample) each containing the outputs of Control-FREEC
-2. Add the modifyRatio script to the directory containing those sample directories
-   - this will add the sample name and ploidy of each sample to the ratio.txt file which will be useful in R
+2. Add the modifyRatio.sh to the directory containing those sample directories
+   - this script will add the sample name and ploidy of each sample to the ratio.txt file
 3. Add modifyRatioFREEC.sh and modifyRatioFREEC.slurm.sh and submit the slurm job on Sol
 
 `sbatch modifyRatioFREEC.slurm.sh`
 
    - If completed correctly, each sample directory will now contain the modified ratio.txt file
-4. to be continued
+
+- Now open R and import those ratio files
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"

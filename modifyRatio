@@ -1,0 +1,32 @@
+#!/bin/bash
+#
+#This script will alter the ratio file output from Control FREEC. This will add a column with sample name and a column with the output ploidy
+#These changes are useful for plotting CNVs in R, and this can be skipped if you figure out a better way to plot many graphs at once
+#This script is called by the modifyFREECRatio.sh script and must be in the same directory as it.
+#
+#You can also run this script by itself on one sample via:
+# ./modifyRatio.sh info.txt ratio.txt
+
+if [ $# -ne 2 ];then
+	cat << ERROR_MESSAGE
+Usage error
+${0##/} [from] [where]
+ERROR_MESSAGE
+fi
+
+
+column1=$(cat $1 | head -2 | tail -1 | awk '{print $1}')
+column1_value=$(cat $1 | head -2 | tail -1 | awk '{print $2}')
+column2=$(cat $1 | head -11 | tail -1 | awk '{print $1}')
+column2_value=$(cat $1 | head -11 | tail -1 | awk '{print $2}')
+
+echo $column1 > .c1
+echo $column1_value > .c1v
+echo $column2 > .c2
+echo $column2_value > .c2v
+
+cat $2 | awk '{ getline ln < ".c1v"; getline lm < ".c2v"; print $0"\t"ln"\t"lm }' > result.txt
+cat result.txt | head -1 > headline
+cat result.txt | sed '1d' > temp && mv temp result.txt
+cat headline | awk '{ getline ln < ".c1"; getline lm < ".c2"; $6=ln;$7=lm;print $0 }' > temp && mv temp headline
+(echo "$(cat headline)" && cat result.txt) | tee EXPECTED.txt

@@ -3,8 +3,6 @@
 ## Instructions for running Control-FREEC on WGS data
  _This will allow you to run Control-FREEC on multiple samples on Sol_
  
- _Control-FREEC developed by Boeva Lab Group_
- 
  _This pipeline by RCV and KJF_
 
 
@@ -54,12 +52,12 @@
 - Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here:
 1. You should have a bunch of directories (one per sample) each containing the outputs of Control-FREEC
 2. Add the modifyRatio script to the directory containing those sample directories
- - this will add the sample name and ploidy of each sample to the ratio.txt file which will be useful in R
+   - this will add the sample name and ploidy of each sample to the ratio.txt file which will be useful in R
 3. Add modifyRatioFREEC.sh and modifyRatioFREEC.slurm.sh and submit the slurm job on Sol
 
 `sbatch modifyRatioFREEC.slurm.sh`
 
-- If completed correctly, each sample directory will now contain the modified ratio.txt file
+   - If completed correctly, each sample directory will now contain the modified ratio.txt file
 4. to be continued
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"

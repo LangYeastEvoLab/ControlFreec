@@ -50,8 +50,8 @@
 - This can be done on an individual sample by the following command on Sol:
 -  
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
-  -Make sure R module is loaded
-
+   - Make sure R module is loaded
+- Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"

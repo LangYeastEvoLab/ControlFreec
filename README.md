@@ -14,7 +14,7 @@
 
 - Once downloaded, run the "make" command in the src directory
 - For more details, see Control-FREEC [manual](http://boevalab.com/FREEC/tutorial.html)
-
+---
 ### Before Running
 - To run Control-FREEC you will need several files:
 1. Aligned SAM or BAM files (single-end or paired-end, sorted or unsorted)
@@ -36,6 +36,7 @@
 - Modify controlfreec.sh and slurm file
   - edit paths in .sh file and take careful note of preserving wildcards (dot asterisk) or variables ($i5$i7) in `sed` commands
     - these edit lines in Config file, allowing it to itterate through all your samples
+---
 ### Running Control-FREEC
 - Make sure you've added controlfreec.sh and controlfreec.slurm.sh to Sol
 - Submit the slurm job on Sol 
@@ -43,7 +44,7 @@
   `sbatch controlfreec.slurm.sh`
 
 - If completed correctly, there will be a directory for each sample with output data
-
+---
 ### Plotting Outputs
 - This can be done on an individual sample by the following command on Sol (make sure R module is loaded)
 
@@ -58,8 +59,9 @@
 `sbatch modifyRatioFREEC.slurm.sh`
 
    - If completed correctly, each sample directory will now contain the modified ratio.txt file
-
+---
 - Now open R and import those ratio files
+---
 ### Troubleshooting
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"

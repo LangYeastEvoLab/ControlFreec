@@ -68,6 +68,7 @@
 - Now open R and import those ratio files (make sure working directory is set to files' location)
 
 `filelist = list.files(pattern="*.txt")`
+
 `df.list <- lapply(filelist, FUN = read.delim, header = TRUE)`
 
 - Run modified plotting script

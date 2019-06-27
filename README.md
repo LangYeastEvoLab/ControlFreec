@@ -64,9 +64,15 @@
       - open all modified ratio files (now named samplename-FREEC.txt) at the same time in Notepad++, searc/replace all "space" with "tab" in all open files (easily done in Notepad++). Save and close them.
       - copy and paste a "tab" from any other line in the file, as you cannot type a tab in the search/replace bar
 ---
-- Now open R and import those ratio files
+- Download all sample-FREEC.txt files into one location on your computer
+- Now open R and import those ratio files (make sure working directory is set to files' location)
 
-`placeholder `
+`filelist = list.files(pattern="*.txt")`
+`df.list <- lapply(filelist, FUN = read.delim, header = TRUE)`
+
+- Run modified plotting script
+
+`lapply(df.list, Make.FREEC.plot)`
 
 ---
 ### Troubleshooting

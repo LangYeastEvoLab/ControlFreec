@@ -49,7 +49,7 @@
 - This can easily be done for a small number of samples by entering the following command on Sol (make sure R module is loaded)
 
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
-
+---
 ### Plotting Outputs for Many Samples
 - Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here:
 1. You should have a bunch of directories (one per sample) each containing the outputs of Control-FREEC
@@ -63,7 +63,7 @@
    - Due to the modifyRatio code not being perfect you must do the following, because the first row of text will not be tab delimited:
       - open all modified ratio files (now named samplename-FREEC.txt) at the same time in Notepad++, searc/replace all "space" with "tab" in all open files (easily done in Notepad++). Save and close them.
       - copy and paste a "tab" from any other line in the file, as you cannot type a tab in the search/replace bar
----
+
 - Download all sample-FREEC.txt files into one location on your computer
 - Now open R and import those ratio files (make sure working directory is set to files' location)
 

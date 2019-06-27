@@ -45,11 +45,12 @@
 
 - If completed correctly, there will be a directory for each sample with output data
 ---
-### Plotting Outputs
-- This can be done on an individual sample by the following command on Sol (make sure R module is loaded)
+### Plotting Outputs for A Few Samples
+- This can easily be done for a small number of samples by entering the following command on Sol (make sure R module is loaded)
 
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
 
+### Plotting Outputs for Many Samples
 - Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here:
 1. You should have a bunch of directories (one per sample) each containing the outputs of Control-FREEC
 2. Add the modifyRatio.sh to the directory containing those sample directories
@@ -59,7 +60,9 @@
 `sbatch modifyRatioFREEC.slurm.sh`
 
    - If completed correctly, each sample directory will now contain the modified ratio.txt file
-   - Until I fix code: Using Notepad++ for ease, open all these files. Find and replace "space" with "tab" in all files. Save and close them.
+   - modifRatio code isn't perfect so you must do this: Using Notepad++ for ease, open all modified ratio.txt files (now named samplename-FREEC.txt). Find and replace "space" with "tab" in all files. Save and close them.
+      - copy and paste a "tab" from elsewhere in the file (you cannot type a "tab" into the search/replace bar)
+      - this must be done because first line is separated by spaces, not tabs.
 ---
 - Now open R and import those ratio files
 

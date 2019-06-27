@@ -3,7 +3,7 @@
 ## Instructions for running Control-FREEC on WGS data
  _This will allow you to run Control-FREEC on multiple samples on Sol_
  
- _This pipeline by RCV and KJF_
+ _This pipeline by RCV_
 
 
 ### Install

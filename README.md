@@ -49,6 +49,7 @@
 - This can easily be done for a small number of samples by entering the following command on Sol (make sure R module is loaded)
 
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
+
 ---
 ### Plotting Outputs for Many Samples
 - Plotting numerous samples at once is a bit trickier and there may be an easier method than what I have here:

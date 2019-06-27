@@ -60,9 +60,7 @@
 `sbatch modifyRatioFREEC.slurm.sh`
 
    - If completed correctly, each sample directory will now contain the modified ratio.txt file
-   - modifRatio code isn't perfect so you must do this: Using Notepad++ for ease, open all modified ratio.txt files (now named samplename-FREEC.txt). Find and replace "space" with "tab" in all files. Save and close them.
-      - copy and paste a "tab" from elsewhere in the file (you cannot type a "tab" into the search/replace bar)
-      - this must be done because first line is separated by spaces, not tabs.
+
 ---
 - Now open R and import those ratio files
 

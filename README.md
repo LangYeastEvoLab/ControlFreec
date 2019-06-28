@@ -76,8 +76,9 @@
 
 `lapply(df.list, Make.FREEC.plot)`
 
+   - If done correctly, you should have a plot for each sample
 ---
-### Troubleshooting
+### Troubleshooting Control-FREEC
 - make sure chromosome fasta files end with extension ".fasta", not ".fsa"
 - make sure chromosome length file ends with extension ".len"
 - make sure `sed` lines are working correctly by running them alone on the command line and viewing if changes were made in the Config file

@@ -73,7 +73,7 @@
 
 `df.list <- lapply(filelist, FUN = read.delim, header = TRUE)`
 
-- Run modified plotting script
+- Add Make.FREEC.plot.R script and run modified plotting script
 
 `lapply(df.list, Make.FREEC.plot)`
 

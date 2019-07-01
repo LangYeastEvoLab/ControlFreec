@@ -1,5 +1,6 @@
 Make.FREEC.plot <- function(input){
  
+  #this is a modified version of FREEC's default makeGraph script, to generate plots for many samples at once 
   ratio<-input
   
   #these will only be in ratio.txt if you use modifyRatio script, add name and ploidy to data frame otherwise

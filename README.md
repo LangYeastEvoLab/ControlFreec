@@ -47,6 +47,7 @@
 ---
 ### Plotting Outputs for A Few Samples
 - This can easily be done for a small number of samples by entering the following command on Sol (make sure R module is loaded)
+- makeGraph.R is included in Control-FREEC download in scripts directory
 
 `cat /path/to/makeGraph.R | R --slave --args < ploidy > < *_ratio.txt >`
 

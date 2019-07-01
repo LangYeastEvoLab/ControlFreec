@@ -1,9 +1,8 @@
 #!/bin/bash
 
-#Script to alter FREEC output file to include sample name and ploidy chosen by calling modifyRatio script
+#Script to alter FREEC output file to include sample name and ploidy chosen by calling modifyRatio script (usefu for plotting many samples at once)
 #RCV 6.26.2019
 #EXPECTED.txt is the output of modifyRatio script (don't change that name)
-#change paths as necessary
 
 
 for i5 in N502 N503 N504 N505 N506 N507 N508 N517 S513
